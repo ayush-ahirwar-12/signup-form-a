@@ -29,7 +29,8 @@ const Signin = ({ togg, settogg, users, setuser }) => {
       <div className="w-[40%] h-[100%] bg-red-200 rounded-lg overflow-hidden">
         <img
           className="w-full h-full object-bottom object-cover"
-          src="compu.webp"
+          src="https://imgs.search.brave.com/gnX-L9pOGs40eAbuP-kbvsc-JDjLi5t3lRfW5KVeSyQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3IvY2FydG9vbi1n/ZWVreS1uZXJkLWtp/ZC1pcy10eXBpbmct/bm90ZWJvb2stZW50/aHVzaWFzdGljYWxs/eV85NjMzLTEyLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDA"
+          alt="background"
         />
       </div>
 
@@ -81,6 +82,8 @@ const Signin = ({ togg, settogg, users, setuser }) => {
           </button>
         </h1>
       </form>
+      {/* <img className="w-50 h-50 object-cover" src={process.env.PUBLIC_URL + '/guyy.webp'}
+ alt="" /> */}
     </>
   );
 };

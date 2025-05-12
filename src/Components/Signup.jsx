@@ -34,8 +34,8 @@ const Signup = ({ togg, settogg, users, setuser }) => {
     <>
       <div className="w-[40%] h-[100%] bg-red-100  rounded-lg overflow-hidden">
         <img
-          className="w-[120%] h-[120%] object-bottom object-cover relative left-[-20%]"
-          src="emai.webp"
+          className="w-[100%] h-[100%] object-bottom object-cover relative "
+          src="https://img.freepik.com/premium-photo/3d-render-cartoon-like-man-working-with-laptop_332133-4909.jpg?semt=ais_hybrid&w=740"
         />
       </div>
 
