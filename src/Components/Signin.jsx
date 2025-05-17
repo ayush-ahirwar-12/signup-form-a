@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { UserContext } from "../Context/Contextuser";
 
-const Signin = ({ togg, settogg, users, setuser }) => {
+const Signin = () => {
+  const { toggler, setToggler, user, setUser }=useContext(UserContext);
   const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const submithandler = (data) => {
     console.log(data);
 
-    const checker = users.find(
-      (users) => users.email === data.email && users.password === data.password 
+    const checker = user.find(
+      (user) => user.email === data.email && user.password === data.password 
     );
     if (checker) {
       toast.success("user Already exists");
@@ -75,7 +77,7 @@ const Signin = ({ togg, settogg, users, setuser }) => {
           Doesn't Have An Account?
           <button
             type="button"
-            onClick={() => settogg(!togg)}
+            onClick={() => setToggler(!toggler)}
             className="ml-2 font-semibold text-blue-600"
           >
             Sign Up

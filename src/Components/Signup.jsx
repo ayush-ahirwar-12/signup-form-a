@@ -1,24 +1,27 @@
 import { nanoid } from "nanoid/non-secure";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { UserContext } from "../Context/Contextuser";
 
 
-const Signup = ({ togg, settogg, users, setuser }) => {
+const Signup = () => {
+  const { toggler, setToggler, user, setUser } = useContext(UserContext);
+  
   const [showPassword, setShowPassword] = useState(false);
   const { register,reset, handleSubmit ,formState: { errors }} = useForm();
-  const checker=users.password;
+  const checker=user.password;
 
 
   const submithandler = (data) => {
     data.id = nanoid();
-    setuser([...users, data]);
+    setUser([...user, data]);
     toast.success("User registered successfully!");
     reset();
   }
-  console.log(users);
+  console.log(user);
   useEffect(() => {
     if (errors.password) {
       toast.error(errors.password.message || "Invalid record");
@@ -92,7 +95,7 @@ const Signup = ({ togg, settogg, users, setuser }) => {
           Already have an Account?
           <button
             type="button"
-            onClick={() => settogg(!togg)}
+            onClick={() => setToggler(!toggler)}
             className="ml-2 font-semibold text-blue-600"
           >
             SignIn
