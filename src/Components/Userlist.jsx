@@ -3,7 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { UserContext } from '../Context/Contextuser';
 
 const Userslist = () => {
-  const { user = [], setuser } = useContext(UserContext); // fallback to empty array
+  const { user = [], setuser } = useContext(UserContext)
 
   const handleDelete = (id) => {
     const updatedUsers = user.filter((u) => u.id !== id);
