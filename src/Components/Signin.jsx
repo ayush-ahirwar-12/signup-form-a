@@ -23,7 +23,7 @@ const Signin = () => {
   };
 
   const togglePasswordVisibility = () => {
-    setShowPassword((prev) => !prev);
+    setShowPassword((prev) => !prev)
   };
   return (
     <>
