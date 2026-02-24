@@ -1,8 +1,8 @@
 import React, { use, useContext, useRef, useState } from "react";
-import Signup from "./Components/Signup";
-import Signin from "./Components/Signin";
-import Userslist from "./Components/Userlist";
-import { UserContext } from "./Context/Contextuser";
+import Signup from "./Components/Signup"
+import Signin from "./Components/Signin"
+import Userslist from "./Components/Userlist"
+import { UserContext } from "./Context/Contextuser"
 
 const App = () => {
     const { toggler} = useContext(UserContext);
