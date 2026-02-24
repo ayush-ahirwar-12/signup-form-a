@@ -5,11 +5,7 @@ import Userslist from "./Components/Userlist";
 import { UserContext } from "./Context/Contextuser";
 
 const App = () => {
-    const { toggler, setToggler, user, setUser } = useContext(UserContext);
-  
-  
-  
-
+    const { toggler} = useContext(UserContext);
   return (
     <>
       <div className="w-full h-screen bg-white p-10 flex justify-between">
