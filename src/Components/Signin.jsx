@@ -18,7 +18,7 @@ const Signin = () => {
     if (checker) {
       toast.success("user Already exists");
     } else {
-      toast.error("user not found!");
+      toast.error("user not found!")
     }
     reset();
   };
