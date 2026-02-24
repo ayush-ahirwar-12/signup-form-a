@@ -7,8 +7,8 @@ const Userslist = () => {
 
   const handleDelete = (id) => {
     const updatedUsers = user.filter((u) => u.id !== id);
-    setuser(updatedUsers);
-  };
+    setuser(updatedUsers)
+  }
 
   return (
     <div className='w-[25%] h-full p-8 flex flex-col items-center'>
