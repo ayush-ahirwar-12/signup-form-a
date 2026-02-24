@@ -10,13 +10,12 @@ const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { register, handleSubmit, reset } = useForm();
   const submithandler = (data) => {
-    console.log(data);
 
     const checker = user.find(
       (user) => user.email === data.email && user.password === data.password 
     );
     if (checker) {
-      toast.success("user Already exists");
+      toast.success("user Already exists")
     } else {
       toast.error("user not found!")
     }
